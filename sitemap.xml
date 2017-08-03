@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://rpi.vn/rasbian-cho-raspberry-tren-linux/</loc>
+    <lastmod>2017-08-01T23:47:03+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/</loc>
     <lastmod>2017-07-14T21:20:03+07:00</lastmod>
   </url>
@@ -28,32 +33,32 @@
   </url>
   
   <url>
-    <loc>https://rpi.vn/tags/install/</loc>
-    <lastmod>2017-07-14T21:16:03+07:00</lastmod>
+    <loc>https://rpi.vn/categories/install/</loc>
+    <lastmod>2017-08-01T23:47:03+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rpi.vn/categories/install/</loc>
-    <lastmod>2017-07-14T21:20:03+07:00</lastmod>
+    <loc>https://rpi.vn/tags/install/</loc>
+    <lastmod>2017-08-01T23:47:03+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rpi.vn/post/</loc>
-    <lastmod>2017-07-14T21:20:03+07:00</lastmod>
+    <lastmod>2017-08-01T23:47:03+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rpi.vn/</loc>
-    <lastmod>2017-07-14T21:20:03+07:00</lastmod>
+    <lastmod>2017-08-01T23:47:03+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rpi.vn/tags/</loc>
-    <lastmod>2017-07-14T21:16:03+07:00</lastmod>
+    <lastmod>2017-08-01T23:47:03+07:00</lastmod>
     <priority>0</priority>
   </url>
   

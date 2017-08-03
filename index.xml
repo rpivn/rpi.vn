@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hubo](//hugo.io). Sponsor by [IoT Maker Việt Nam](//iotmaker.vn)</copyright>
-    <lastBuildDate>Fri, 14 Jul 2017 21:20:03 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 01 Aug 2017 23:47:03 +0700</lastBuildDate>
     
 	<atom:link href="https://rpi.vn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu</title>
+      <link>https://rpi.vn/rasbian-cho-raspberry-tren-linux/</link>
+      <pubDate>Tue, 01 Aug 2017 23:47:03 +0700</pubDate>
+      
+      <guid>https://rpi.vn/rasbian-cho-raspberry-tren-linux/</guid>
+      <description>Tổng quan Như đã giới thiệu ở bài viết &amp;ldquo;Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X&amp;rdquo;, Raspberry Pi 3 có nhiều tính năng vượt trội, tích hợp sẵn wifi, BLE&amp;hellip; Chính vì thế, việc lựa chọn Raspberry Pi 3 để sử dụng là hợp lý nhất so với những phiên bản cũ mà giá thành không chênh lệnh nhau quá lớn. Tuy nhiên việc người dùng sử dụng quá nhiều hệ điều hành khác nhau đưa đến việc cài đặt hệ điều hành cho Raspberry Pi cũng khác nhau.</description>
+    </item>
     
     <item>
       <title>Raspberry Pi kết nối Internet sử dụng USB 3G Viettel - D6601</title>
