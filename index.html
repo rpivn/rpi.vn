@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>RPi</title>
-    <meta name="generator" content="Hugo 0.26-DEV" />
+    <meta name="generator" content="Hugo 0.27-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Raspberry Pi Blog">
@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-08-01T23:47:03&#43;07:00"/>
+<meta property="og:updated_time" content="2017-08-13T23:47:03&#43;07:00"/>
 
 
 
@@ -175,12 +175,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        3
+        4
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          2
+          3
         
         <span>
             Tags
@@ -276,6 +276,154 @@
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
+        <a href="https://rpi.vn/blink-led-python/" itemprop="url">
+            <img src="https://rpi.vn/post/begin/gpio/banner.png" class="article-banner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://rpi.vn/blink-led-python/">
+    <h1 class="article-title" itemprop="name">
+        Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-08-13 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-13</time>
+            &middot;
+            742
+            words
+            &middot;
+            4
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://rpi.vn/categories/tutorial">tutorial</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://rpi.vn/tags/tutorial">tutorial</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Tổng quan  Trong bài học này bạn sẽ học cách kết nối LED với chân GPIO trên Raspberry PI, và làm cho nó nhấp nháy sử dụng python. Trước khi vào bài học, ta cùng tìm hiểu GPIO trên Raspberry PI. GPIO là chân vật lý trên một mạch tích hợp (trong trường hợp của PI là BCM2837 SoC) có thể được sử dụng với mục đích làm ngõ vào hoặc ngõ ra và được kiểm soát bởi người dùng trong thời gian chạy.
+            </p>
+            <p class="article-more-link">
+                <a href="https://rpi.vn/blink-led-python/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://rpi.vn/blink-led-python/" data-id="53668b261f6812cd383faf8ffefdfb58" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://rpi.vn/blink-led-python/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
         <a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" itemprop="url">
             <img src="https://rpi.vn/post/begin/ubuntu-setup/banner.png" class="article-banner">
         
@@ -284,7 +432,7 @@
         <header class="article-header">
     <a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/">
     <h1 class="article-title" itemprop="name">
-        Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu
+        Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu
     </h1>
     </a>
     <div class="article-meta">
@@ -294,7 +442,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2017-08-01 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-01</time>
             &middot;
-            470
+            505
             words
             &middot;
             3
@@ -747,6 +895,32 @@
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="https://rpi.vn/blink-led-python/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://rpi.vn/post/begin/gpio/banner.png)" alt="RPi" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://rpi.vn/categories/tutorial">
+                        tutorial
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://rpi.vn/blink-led-python/" class="title">Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-08-13 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-13</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" class="thumbnail">
                     
                         <span style="background-image:url(https://rpi.vn/post/begin/ubuntu-setup/banner.png)" alt="RPi" class="thumbnail-image"></span>
@@ -764,7 +938,7 @@
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" class="title">Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu</a></p>
+                    <p class="item-title"><a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" class="title">Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu</a></p>
                     <p class="item-date">
                         <time datetime="2017-08-01 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-01</time>
                     </p>
@@ -844,6 +1018,14 @@
                 <span class="category-list-count">3</span>
             </li>
             
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://rpi.vn/categories/tutorial">
+                    tutorial
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
         </ul>
     </div>
 </div>
@@ -867,6 +1049,14 @@
                     install
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://rpi.vn/tags/tutorial">
+                    tutorial
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
@@ -895,6 +1085,9 @@
         
         
         <a href="https://rpi.vn/tags/install" style="font-size: 12px;">install</a>
+        
+        
+        <a href="https://rpi.vn/tags/tutorial" style="font-size: 12px;">tutorial</a>
         
         
         <a href="https://rpi.vn/tags/usb3g" style="font-size: 12px;">usb3g</a>

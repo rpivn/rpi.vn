@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on RPi</title>
+    <link>https://rpi.vn/tags/tutorial/</link>
+    <description>Recent content in Tutorial on RPi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hubo](//hugo.io). Sponsor by [IoT Maker Việt Nam](//iotmaker.vn)</copyright>
+    <lastBuildDate>Sun, 13 Aug 2017 23:47:03 +0700</lastBuildDate>
+    
+	<atom:link href="https://rpi.vn/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python</title>
+      <link>https://rpi.vn/blink-led-python/</link>
+      <pubDate>Sun, 13 Aug 2017 23:47:03 +0700</pubDate>
+      
+      <guid>https://rpi.vn/blink-led-python/</guid>
+      <description>Tổng quan  Trong bài học này bạn sẽ học cách kết nối LED với chân GPIO trên Raspberry PI, và làm cho nó nhấp nháy sử dụng python. Trước khi vào bài học, ta cùng tìm hiểu GPIO trên Raspberry PI. GPIO là chân vật lý trên một mạch tích hợp (trong trường hợp của PI là BCM2837 SoC) có thể được sử dụng với mục đích làm ngõ vào hoặc ngõ ra và được kiểm soát bởi người dùng trong thời gian chạy.</description>
+    </item>
+    
+  </channel>
+</rss>

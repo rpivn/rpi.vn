@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>About &middot; RPi</title>
+    <title>Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python &middot; RPi</title>
     <meta name="generator" content="Hugo 0.27-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,10 +10,7 @@
       <meta name="description" content="">
     
     
-      <link href="https://rpi.vn/about/index.xml" rel="alternate" type="application/rss+xml" title="RPi" />
-      <link href="https://rpi.vn/about/index.xml" rel="feed" type="application/rss+xml" title="RPi" />
-    
-    <link rel="canonical" href="https://rpi.vn/about/"/>
+    <link rel="canonical" href="https://rpi.vn/blink-led-python/"/>
     <link rel="icon" href="https://rpi.vn/favicon.ico">
     <link rel="apple-touch-icon" href="https://rpi.vn/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://rpi.vn/css/style.css">
@@ -23,14 +20,16 @@
     
     <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=vietnamese" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="About" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://rpi.vn/about/" />
+    <meta property="og:title" content="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python" />
+<meta property="og:description" content="Tổng quan  Trong bài học này bạn sẽ học cách kết nối LED với chân GPIO trên Raspberry PI, và làm cho nó nhấp nháy sử dụng python. Trước khi vào bài học, ta cùng tìm hiểu GPIO trên Raspberry PI. GPIO là chân vật lý trên một mạch tích hợp (trong trường hợp của PI là BCM2837 SoC) có thể được sử dụng với mục đích làm ngõ vào hoặc ngõ ra và được kiểm soát bởi người dùng trong thời gian chạy." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rpi.vn/blink-led-python/" />
 
 
 
-<meta property="og:updated_time" content="2017-05-19T21:49:20&#43;02:00"/>
+<meta property="article:published_time" content="2017-08-13T23:47:03&#43;07:00"/>
+<meta property="article:modified_time" content="2017-08-13T23:47:03&#43;07:00"/>
+
 
 
 
@@ -43,12 +42,19 @@
 
     
     
-<meta itemprop="name" content="About">
-<meta itemprop="description" content="">
+<meta itemprop="name" content="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python">
+<meta itemprop="description" content="Tổng quan  Trong bài học này bạn sẽ học cách kết nối LED với chân GPIO trên Raspberry PI, và làm cho nó nhấp nháy sử dụng python. Trước khi vào bài học, ta cùng tìm hiểu GPIO trên Raspberry PI. GPIO là chân vật lý trên một mạch tích hợp (trong trường hợp của PI là BCM2837 SoC) có thể được sử dụng với mục đích làm ngõ vào hoặc ngõ ra và được kiểm soát bởi người dùng trong thời gian chạy.">
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="About"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="dateModified" content="2017-08-13T23:47:03&#43;07:00" />
+<meta itemprop="wordCount" content="742">
+
+
+
+<meta itemprop="keywords" content="tutorial," />
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python"/>
+<meta name="twitter:description" content="Tổng quan  Trong bài học này bạn sẽ học cách kết nối LED với chân GPIO trên Raspberry PI, và làm cho nó nhấp nháy sử dụng python. Trước khi vào bài học, ta cùng tìm hiểu GPIO trên Raspberry PI. GPIO là chân vật lý trên một mạch tích hợp (trong trường hợp của PI là BCM2837 SoC) có thể được sử dụng với mục đích làm ngõ vào hoặc ngõ ra và được kiểm soát bởi người dùng trong thời gian chạy."/>
 <meta name="twitter:site" content="@iotmakervn"/>
 
     
@@ -271,17 +277,16 @@
 
     <section id="main">
     
-    
-    
-    
-        <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
     <div class="article-inner">
+        
+            <img src="https://rpi.vn/post/begin/gpio/banner.png" class="article-banner">
         
 
         <header class="article-header">
-    <a href="https://rpi.vn/about/">
+    <a href="https://rpi.vn/blink-led-python/">
     <h1 class="article-title" itemprop="name">
-        About
+        Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python
     </h1>
     </a>
     <div class="article-meta">
@@ -289,29 +294,180 @@
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2017-05-19 21:49:20 &#43;0200 &#43;0200" itemprop="datePublished">2017-05-19</time>
+            <time datetime="2017-08-13 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-13</time>
             &middot;
-            5
+            742
             words
             &middot;
-            1
+            4
             minute read
         </div>
         
         
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://rpi.vn/categories/tutorial">tutorial</a>
+                
+                
+            </div>
+            
+        
 
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://rpi.vn/tags/tutorial">tutorial</a>
+                
+                
+            </div>
+            
         
     </div>
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>Add some information about yourself.</p>
+            
+
+<h1 id="tổng-quan">Tổng quan</h1>
+
+<ul>
+<li>Trong bài học này bạn sẽ học cách kết nối LED với chân GPIO trên Raspberry PI, và làm cho nó nhấp nháy sử dụng python. Trước khi vào bài học, ta cùng tìm hiểu GPIO trên Raspberry PI.</li>
+<li>GPIO là chân vật lý trên một mạch tích hợp (trong trường hợp của PI là BCM2837 SoC) có thể được sử dụng với mục đích làm ngõ vào hoặc ngõ ra và được kiểm soát bởi người dùng trong thời gian chạy. Bằng cách kết nối các cảm biển, thiết bị hiển thị và cơ cấu truyền động&hellip; Raspberry có thể giao tiếp với thế giới điện tử một cách dễ dàng.</li>
+<li>Cách đơn giản nhất bạn có thể quan sát sự hoạt động của GPIO trên Raspberry là nhấp nháy LED. Nó tương tự như chương trình Hello World thông thường mà bạn thường học khi bắt đầu một ngôn ngữ lập trình mới.</li>
+<li>Dưới đây là sơ đồ chân GPIO trên Raspberry PI 3:</li>
+</ul>
+
+<p><img src="/post/begin/gpio/01.png" alt="Sơ đồ chân GPIO trên Raspberry PI 3" /></p>
+
+<h1 id="thực-hiện">Thực hiện</h1>
+
+<h2 id="phần-cứng">Phần cứng</h2>
+
+<ul>
+<li>Một Raspberry PI 3</li>
+<li>Một bộ nguồn 5V-2.5A (theo khuyến cáo của nhà sản xuất nên dùng nguồn lớn hơn 2A)</li>
+<li>Một thẻ nhớ đã cài hệ điều hành Raspbian và đã cài đặt wifi</li>
+<li>Một máy tính kết nối chung wifi với Raspberry</li>
+<li>Đèn LED</li>
+<li>Điện trở 470 Ohm</li>
+<li>Breadboard</li>
+<li>Dây cắm</li>
+</ul>
+
+<h2 id="kết-nối">Kết nối</h2>
+
+<ul>
+<li>Ta sử dụng chân số 9 và 11 như hình bên dưới. Để chắc chắc kết nối mạch chính xác, bạn cần lưu ý phân cực của LED. Có 3 cách nhận biết cực của LED:
+
+<ul>
+<li>Cách 1: dựa vào chân của LED, chân dài hơn thường được kết nối với nguồn áp cao, chân ngắn kết nối với nguồn áp thấp (ở đây là GND). &ndash;&gt; thường được sử dụng</li>
+<li>Cách 2: dựa vào bản cực bên trong LED, bản cực nhỏ - áp cao, bản cực lớn - áp thấp (GND)</li>
+<li>Cách 3: dựa vào mảnh khuyết ở trên thân LED, không khuyết - áp cao, khuyết - áp thấp (GND)</li>
+</ul></li>
+<li>Như vậy ta sẽ kết nối chân dài vào điện trở để kết nối với chân 11, và chân ngắn kết nối với chân 9 là GND (như sơ đồ chân ở hình trên).</li>
+</ul>
+
+<p><img src="/post/begin/gpio/02.png" alt="Kết nối LED với Raspberry PI 3" /></p>
+
+<h2 id="giới-thiệu-về-api-gpio-trên-python">Giới thiệu về API GPIO trên python</h2>
+
+<ul>
+<li>Để truy suất dữ liệu về GPIO trên python ta sử dụng module <code>RPi.GPIO</code>. Ta sẽ gọi module này ở đầu chương trình như sau:</li>
+</ul>
+
+<pre><code>    import RPi.GPIO as GPIO
+</code></pre>
+
+<ul>
+<li>Có 2 cách khái báo chân cho Raspberry:
+
+<ul>
+<li>Cách 1: GPIO.BOARD: Khai báo theo số PIN của header (PIN1 - PIN40)
+<code>
+GPIO.setmode(GPIO.BOARD)
+</code></li>
+<li>Cách 2: GPIO.BCM: Khai báo theo số GPIO của IC (GPIO02 - GPIO27)
+<code>
+GPIO.setmode(GPIO.BCM)
+</code></li>
+</ul></li>
+<li>Để cài đặt mode sử dụng cho GPIO, sử dụng hàm <code>setup([pin], [GPIO.IN, GPIO.OUT]</code>. Ví dụ cài đặt chân số 11 làm ngõ ra, và sử dụng khai báo <code>GPIO.BOARD</code>:</li>
+</ul>
+
+<pre><code>  GPIO.setmode(GPIO.BOARD)
+  GPIO.setup(11, GPIO.OUT)
+</code></pre>
+
+<ul>
+<li>Để xuất mức tín hiệu cao hay thấp, sử dụng hàm <code>GPIO.output([pin], [GPIO.LOW, GPIO.HIGH])</code>:</li>
+</ul>
+
+<pre><code>  GPIO.output(11,GPIO.HIGH)
+</code></pre>
+
+<h2 id="lập-trình">Lập trình</h2>
+
+<ul>
+<li>Trong bài học này ta sử dụng python 2.7 để lập trình. Đây là phần mềm có sẵn khi cài đặt Raspbian, nên ta không cần cài đặt lại nữa</li>
+<li>Sử dụng máy tính kết với với Raspberry thông qua terminal (Ubuntu) hay Putty (Windows)</li>
+<li>Khi đã hoàn thành kết nối, thực hiện lệnh: <code>sudo nano blink.py</code> để tạo file blink.py hoặc mở file blink.py có sẵn</li>
+<li>Nhập vào đoạn chương trình:</li>
+</ul>
+
+<pre><code>import RPi.GPIO as GPIO
+import time
+LedPin = 11    # pin11
+def setup():
+  GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
+  GPIO.setup(LedPin, GPIO.OUT)   # Set LedPin's mode is output
+  GPIO.output(LedPin, GPIO.HIGH) # Set LedPin high(+3.3V) to turn on led
+def blink():
+  while True:
+    GPIO.output(LedPin, GPIO.HIGH)  # led on
+    time.sleep(1)
+    GPIO.output(LedPin, GPIO.LOW) # led off
+    time.sleep(1)
+def destroy():
+  GPIO.output(LedPin, GPIO.LOW)   # led off
+  GPIO.cleanup()                  # Release resource
+if __name__ == '__main__':     # Program start from here
+  setup()
+  try:
+    blink()
+  except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+    destroy()
+</code></pre>
+
+<ul>
+<li>Lưu chương trình bằng cách nhấn Ctrl+X -&gt; Y -&gt; Enter</li>
+<li>Để chạy chương trình, thực hiện lệnh <code>sudo python blink.py</code>. Nếu chương trình chạy đúng bạn có thể thấy LED chớp tắt với chu lỳ 1 giây.</li>
+</ul>
+
+<p>Trên đây là toàn bộ hướng dẫn giúp bạn giao tiếp với các thiết bị ngoại vi thông qua GPIO ở mode digital input/ouput của Raspberry PI với ví dụ điển hình là chớp tắt LED. Chúc các bạn thành công.</p>
+
+<h1 id="tham-khảo">Tham Khảo:</h1>
+
+<ul>
+<li><a href="https://www.raspinews.com/blinking-led-on-raspberry-pi-using-python/">https://www.raspinews.com/blinking-led-on-raspberry-pi-using-python/</a></li>
+</ul>
 
         </div>
         <footer class="article-footer">
-    <a data-url="https://rpi.vn/about/" data-id="a69934980f795699f7cc4d8a50a604b2" class="article-share-link">
+    <a data-url="https://rpi.vn/blink-led-python/" data-id="53668b261f6812cd383faf8ffefdfb58" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
+    </a>
+    
+    <a href="https://rpi.vn/blink-led-python/#disqus_thread" class="article-comment-link">
+        Comments
     </a>
     
 
@@ -384,11 +540,48 @@
     </div>
 
     
+<nav id="article-nav">
+    
+    <a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu</div>
+    </a>
+    
+
+    
+</nav>
+
 
 </article>
 
 
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rpi-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
 
     </section>
 
@@ -406,7 +599,7 @@
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/blink-led-python/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/gpio/banner.png)" alt="About" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/gpio/banner.png)" alt="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -432,7 +625,7 @@
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/ubuntu-setup/banner.png)" alt="About" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/ubuntu-setup/banner.png)" alt="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -458,7 +651,7 @@
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/usb-3g/usb3g.jpg)" alt="About" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/usb-3g/usb3g.jpg)" alt="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -484,7 +677,7 @@
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/moi-truong-phat-trien-rpi-osx/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="About" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python" class="thumbnail-image"></span>
                     
                     </a>
                 </div>

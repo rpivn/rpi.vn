@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu &middot; RPi</title>
-    <meta name="generator" content="Hugo 0.26-DEV" />
+    <title>Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu &middot; RPi</title>
+    <meta name="generator" content="Hugo 0.27-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Raspberry Pi Blog">
@@ -20,7 +20,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Play&amp;subset=vietnamese" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu" />
+    <meta property="og:title" content="Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu" />
 <meta property="og:description" content="Tổng quan Như đã giới thiệu ở bài viết &ldquo;Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X&rdquo;, Raspberry Pi 3 có nhiều tính năng vượt trội, tích hợp sẵn wifi, BLE&hellip; Chính vì thế, việc lựa chọn Raspberry Pi 3 để sử dụng là hợp lý nhất so với những phiên bản cũ mà giá thành không chênh lệnh nhau quá lớn. Tuy nhiên việc người dùng sử dụng quá nhiều hệ điều hành khác nhau đưa đến việc cài đặt hệ điều hành cho Raspberry Pi cũng khác nhau." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" />
@@ -42,18 +42,18 @@
 
     
     
-<meta itemprop="name" content="Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu">
+<meta itemprop="name" content="Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu">
 <meta itemprop="description" content="Tổng quan Như đã giới thiệu ở bài viết &ldquo;Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X&rdquo;, Raspberry Pi 3 có nhiều tính năng vượt trội, tích hợp sẵn wifi, BLE&hellip; Chính vì thế, việc lựa chọn Raspberry Pi 3 để sử dụng là hợp lý nhất so với những phiên bản cũ mà giá thành không chênh lệnh nhau quá lớn. Tuy nhiên việc người dùng sử dụng quá nhiều hệ điều hành khác nhau đưa đến việc cài đặt hệ điều hành cho Raspberry Pi cũng khác nhau.">
 
 
 <meta itemprop="dateModified" content="2017-08-01T23:47:03&#43;07:00" />
-<meta itemprop="wordCount" content="470">
+<meta itemprop="wordCount" content="505">
 
 
 
 <meta itemprop="keywords" content="install," />
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu"/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu"/>
 <meta name="twitter:description" content="Tổng quan Như đã giới thiệu ở bài viết &ldquo;Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X&rdquo;, Raspberry Pi 3 có nhiều tính năng vượt trội, tích hợp sẵn wifi, BLE&hellip; Chính vì thế, việc lựa chọn Raspberry Pi 3 để sử dụng là hợp lý nhất so với những phiên bản cũ mà giá thành không chênh lệnh nhau quá lớn. Tuy nhiên việc người dùng sử dụng quá nhiều hệ điều hành khác nhau đưa đến việc cài đặt hệ điều hành cho Raspberry Pi cũng khác nhau."/>
 <meta name="twitter:site" content="@iotmakervn"/>
 
@@ -181,12 +181,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        3
+        4
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          2
+          3
         
         <span>
             Tags
@@ -286,7 +286,7 @@
         <header class="article-header">
     <a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/">
     <h1 class="article-title" itemprop="name">
-        Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu
+        Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu
     </h1>
     </a>
     <div class="article-meta">
@@ -296,7 +296,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2017-08-01 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-01</time>
             &middot;
-            470
+            505
             words
             &middot;
             3
@@ -393,6 +393,7 @@ network={
 </code></pre>
 
 <ul>
+<li>Từ tháng <sup>11</sup>&frasl;<sub>2016</sub>, Raspberry đã khóa SSH khi khởi động. Để mở khóa SSH, cần tạo 1 file ssh (lưu ý: file này không có phần mở rộng) trong phân vùng boot của SD Card</li>
 <li>Cắm thẻ nhớ vào RPI và chờ khởi động trong khoảng 1 phút</li>
 <li>Đăng nhập vào trang cấu hình của Modem (ví dụ: <a href="http://192.168.1.1">http://192.168.1.1</a>)</li>
 <li>Hầu hết tất cả các modem sẽ hiển thị DHCP Client list, tìm cái nào có host name là raspberrypi, lấy IP đó, ví dụ 192.168.1.12</li>
@@ -493,6 +494,13 @@ network={
     
 
     
+    <a href="https://rpi.vn/blink-led-python/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python</div>
+    </a>
+    
 </nav>
 
 
@@ -539,9 +547,35 @@ network={
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="https://rpi.vn/blink-led-python/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://rpi.vn/post/begin/gpio/banner.png)" alt="Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://rpi.vn/categories/tutorial">
+                        tutorial
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://rpi.vn/blink-led-python/" class="title">Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-08-13 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-13</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/ubuntu-setup/banner.png)" alt="Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/ubuntu-setup/banner.png)" alt="Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -556,7 +590,7 @@ network={
                     </p>
                     
                     
-                    <p class="item-title"><a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" class="title">Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu</a></p>
+                    <p class="item-title"><a href="https://rpi.vn/rasbian-cho-raspberry-tren-linux/" class="title">Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu</a></p>
                     <p class="item-date">
                         <time datetime="2017-08-01 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-01</time>
                     </p>
@@ -567,7 +601,7 @@ network={
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/rpi-ket-noi-internet-voi-usb3g-viettel/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/usb-3g/usb3g.jpg)" alt="Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/usb-3g/usb3g.jpg)" alt="Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -593,7 +627,7 @@ network={
                 <div class="item-thumbnail">
                     <a href="https://rpi.vn/moi-truong-phat-trien-rpi-osx/" class="thumbnail">
                     
-                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="Cài đặt Rasbian cho Raspberry Pi 3 trên Linux/Ubuntu" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="Cài đặt Raspbian cho Raspberry Pi 3 trên Linux/Ubuntu" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -636,6 +670,14 @@ network={
                 <span class="category-list-count">3</span>
             </li>
             
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://rpi.vn/categories/tutorial">
+                    tutorial
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
         </ul>
     </div>
 </div>
@@ -659,6 +701,14 @@ network={
                     install
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://rpi.vn/tags/tutorial">
+                    tutorial
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
@@ -687,6 +737,9 @@ network={
         
         
         <a href="https://rpi.vn/tags/install" style="font-size: 12px;">install</a>
+        
+        
+        <a href="https://rpi.vn/tags/tutorial" style="font-size: 12px;">tutorial</a>
         
         
         <a href="https://rpi.vn/tags/usb3g" style="font-size: 12px;">usb3g</a>
