@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hubo](//hugo.io). Sponsor by [IoT Maker Việt Nam](//iotmaker.vn)</copyright>
-    <lastBuildDate>Sun, 13 Aug 2017 23:47:03 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 15 Aug 2017 11:47:03 +0700</lastBuildDate>
     
 	<atom:link href="https://rpi.vn/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Đọc trạng thái nút nhấn từ Raspberry PI 3</title>
+      <link>https://rpi.vn/button-python/</link>
+      <pubDate>Tue, 15 Aug 2017 11:47:03 +0700</pubDate>
+      
+      <guid>https://rpi.vn/button-python/</guid>
+      <description>Tổng quan  Trong bài học này bạn sẽ học cách kết nối nút nhấn với chân GPIO trên Rapsberry PI, và xuất tín hiệu ra đèn LED. Đây là một ví dụ điển hình cho việc xử lý dữ liệu Digial Input cho Raspberry PI.  Thực hiện Phần cứng  Một Raspberry PI 3 Một bộ nguồn 5V-2.5A (theo khuyến cáo của nhà sản xuất nên dùng nguồn lớn hơn 2A) Một thẻ nhớ đã cài hệ điều hành Raspbian và đã cài đặt wifi Một máy tính kết nối chung wifi với Raspberry Đèn LED Nút nhấn 2 Điện trở 470 Ohm Breadboard Dây cắm  Giới thiệu phương pháp kết nối nút nhấn với Raspberry PI  Trước khi tìm hiểu phương pháp kết nối nút nhấn với Raspberry, ta cần thông qua một khái niệm là &amp;ldquo;Điện trở kéo&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Điều chế độ rộng xung PWM trên Raspberry PI 3</title>
+      <link>https://rpi.vn/pwm-led-python/</link>
+      <pubDate>Mon, 14 Aug 2017 23:47:03 +0700</pubDate>
+      
+      <guid>https://rpi.vn/pwm-led-python/</guid>
+      <description>Tổng quan  Trong bài học &amp;ldquo;Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python&amp;rdquo; bạn đã được tìm hiểu về điều khiển LED thông qua chân GPIO của Raspberry PI 3. Trong bài học này, bạn sẽ học cách điều khiển độ sáng của LED thông qua một khái niệm đó là &amp;ldquo;Điều chế độ rộng xung PWM&amp;rdquo;. Vậy PWM là gì:
+ Pulse Width Modulation (hay PWM): là phương pháp điều chỉnh năng lượng điện áp ngõ ra.</description>
+    </item>
     
     <item>
       <title>Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python</title>

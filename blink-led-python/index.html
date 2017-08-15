@@ -47,7 +47,7 @@
 
 
 <meta itemprop="dateModified" content="2017-08-13T23:47:03&#43;07:00" />
-<meta itemprop="wordCount" content="742">
+<meta itemprop="wordCount" content="725">
 
 
 
@@ -181,7 +181,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        4
+        6
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -296,7 +296,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2017-08-13 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-13</time>
             &middot;
-            742
+            725
             words
             &middot;
             4
@@ -424,26 +424,22 @@ GPIO.setmode(GPIO.BCM)
 
 <pre><code>import RPi.GPIO as GPIO
 import time
-LedPin = 11    # pin11
-def setup():
-  GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
-  GPIO.setup(LedPin, GPIO.OUT)   # Set LedPin's mode is output
-  GPIO.output(LedPin, GPIO.HIGH) # Set LedPin high(+3.3V) to turn on led
-def blink():
+LedPin = 11                         # pin11
+
+GPIO.setmode(GPIO.BOARD)            # Numbers GPIOs by physical location
+GPIO.setup(LedPin, GPIO.OUT)        # Set LedPin's mode is output
+GPIO.output(LedPin, GPIO.HIGH)      # Set LedPin high(+3.3V) to turn on led
+
+try:
   while True:
     GPIO.output(LedPin, GPIO.HIGH)  # led on
     time.sleep(1)
-    GPIO.output(LedPin, GPIO.LOW) # led off
+    GPIO.output(LedPin, GPIO.LOW)   # led off
     time.sleep(1)
-def destroy():
-  GPIO.output(LedPin, GPIO.LOW)   # led off
-  GPIO.cleanup()                  # Release resource
-if __name__ == '__main__':     # Program start from here
-  setup()
-  try:
-    blink()
-  except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
-    destroy()
+except KeyboardInterrupt:           # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
+  pass
+  GPIO.output(LedPin, GPIO.LOW)     # led off
+  GPIO.cleanup()                    # Release resource
 </code></pre>
 
 <ul>
@@ -451,7 +447,7 @@ if __name__ == '__main__':     # Program start from here
 <li>Để chạy chương trình, thực hiện lệnh <code>sudo python blink.py</code>. Nếu chương trình chạy đúng bạn có thể thấy LED chớp tắt với chu lỳ 1 giây.</li>
 </ul>
 
-<p>Trên đây là toàn bộ hướng dẫn giúp bạn giao tiếp với các thiết bị ngoại vi thông qua GPIO ở mode digital input/ouput của Raspberry PI với ví dụ điển hình là chớp tắt LED. Chúc các bạn thành công.</p>
+<p>Trên đây là toàn bộ hướng dẫn giúp bạn giao tiếp với các thiết bị ngoại vi thông qua GPIO ở mode Digital Ouput của Raspberry PI với ví dụ điển hình là chớp tắt LED. Chúc các bạn thành công.</p>
 
 <h1 id="tham-khảo">Tham Khảo:</h1>
 
@@ -551,6 +547,13 @@ if __name__ == '__main__':     # Program start from here
     
 
     
+    <a href="https://rpi.vn/pwm-led-python/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Điều chế độ rộng xung PWM trên Raspberry PI 3</div>
+    </a>
+    
 </nav>
 
 
@@ -594,6 +597,58 @@ if __name__ == '__main__':     # Program start from here
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://rpi.vn/button-python/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://rpi.vn/post/begin/button/banner.png)" alt="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://rpi.vn/categories/tutorial">
+                        tutorial
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://rpi.vn/button-python/" class="title">Đọc trạng thái nút nhấn từ Raspberry PI 3</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-08-15 11:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-15</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://rpi.vn/pwm-led-python/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://rpi.vn/post/begin/pwm/banner.png)" alt="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://rpi.vn/categories/tutorial">
+                        tutorial
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://rpi.vn/pwm-led-python/" class="title">Điều chế độ rộng xung PWM trên Raspberry PI 3</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-08-14 23:47:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-08-14</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -673,32 +728,6 @@ if __name__ == '__main__':     # Program start from here
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://rpi.vn/moi-truong-phat-trien-rpi-osx/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://rpi.vn/post/begin/osx-setup/banner.jpg)" alt="Điều khiển nhấp nháy LED trên Raspberry PI 3 sử dụng Python" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://rpi.vn/categories/install">
-                        install
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://rpi.vn/moi-truong-phat-trien-rpi-osx/" class="title">Môi trường phát triển ứng dụng cho Raspberry Pi trên OS X</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-07-14 21:16:03 &#43;0700 &#43;0700" itemprop="datePublished">2017-07-14</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -725,7 +754,7 @@ if __name__ == '__main__':     # Program start from here
                 <a class="category-list-link" href="https://rpi.vn/categories/tutorial">
                     tutorial
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">3</span>
             </li>
             
         </ul>
@@ -758,7 +787,7 @@ if __name__ == '__main__':     # Program start from here
                 <a class="category-list-link" href="https://rpi.vn/tags/tutorial">
                     tutorial
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">3</span>
             </li>
             
             <li class="category-list-item">
